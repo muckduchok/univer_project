@@ -10,12 +10,12 @@
 <body>
     
 <nav>
-    <div class="main__logo">AVL-LIFT</div>
+    <div id="up" class="main__logo">AVL-LIFT</div>
     <ul class="menu">
         <li class="menu__item"><a href="" class="menu__link">Главное</a></li>
-        <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="" class="menu__link">Работа</a></li>
-        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+        <li class="menu__item"><a href="#company" class="menu__link">О нас</a></li>
+        <li class="menu__item"><a href="#examples" class="menu__link">Работа</a></li>
+        <li class="menu__item"><a href="#calling" class="menu__link">Контакты</a></li>
         <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
     </ul>
 </nav>
@@ -23,10 +23,16 @@
 <section class="first">
     <div class="first__bg"></div>
     <h1>Обращаясь к нам, Вы<br> никогда не пожалете!</h1>
-    <button class="first__btn">Связаться с нами</button>
+    <div class="dropdown">
+    <button class="btn dropdown-toggle first__btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Связаться с нами</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="tel:380668173846">+380668173846</a>
+      <a class="dropdown-item" href="mailto:anton.avhutskiy@gmail.com" target="_blank">anton.avhutskiy@gmail.com</a>
+    </div>
+  </div>
 </section>
 
-<section class="company">
+<section id="company" class="company">
     <h2>О КОМПАНИИ</h2>
     <div class="company__wrapper">
         <div class="wrapper__items wrapper__items_1">
@@ -52,7 +58,7 @@
     </div>
 </section>
 
-<section class="carusel">
+<section id="examples" class="carusel">
     <h2>НАШИ РАБОТЫ:</h2>
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -94,22 +100,61 @@
       </div>
 </section>
 
-<section class="feedback">
+<div class="overlay">
+  <div class="model" id="consult">
+    <div class="model__close">&times;</div>
+    <div class="model__subtitle">Просто заполните форму заявки
+    </div>
+    <div class="model__descr">и мы пеезвоним вам в течении 10 минут</div>
+    <form class="feed-form" action="#">
+      <input name="name" required placeholder="Имя" type="text">
+      <input name="phone" required placeholder="Телефон">
+      <input name="email" required placeholder="Эл. почта" type="email">
+      <textarea class="text" name="comment" required placeholder="Комментарий" cols="30" rows="10"></textarea>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<section id="calling" class="feedback">
     <h2>ОБРАТНАЯ СВЯЗЬ</h2>
-    <div class="feedback__wrapper">
-        <div class="feedback__call">
-            <h2></h2>
-            <form action="">
-                
-            </form>
+    <div id="consultation" class="feedback__wrapper">
+        <div id="consultation-form" class="feedback__call">
+            <div class="feedback__title">Связаться</div>
+              <form class="feed-form" action="#">
+                <input name="name" required placeholder="Имя" type="text">
+                <input name="phone" required placeholder="Телефон">
+                <input name="email" required placeholder="Эл. почта" type="email">
+                <textarea class="text" name="comment" required placeholder="Комментарий" cols="30" rows="10"></textarea>
+                <button class="button">Отправить</button>
+              </form>
+              <div class="model model_mini" id="thanks">
+                <div class="model__close">&times;</div>
+                <div class="model__subtitle">Спасибо за вашу заявку
+                </div>
+                <div class="model__descr">Наш менеджер свяжется с вами 
+                    в ближайшее время!</div>
+            </div>
+        </div>
+        <div class="feedback__img">
         </div>
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<footer>
+  <div>Все права защищены</div>
+</footer>
+
+<a href="#up" class="pageup">
+  <img src="img/icons/upload.svg" alt="up">
+</a>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
