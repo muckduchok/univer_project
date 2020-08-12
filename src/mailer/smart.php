@@ -19,7 +19,7 @@ $mail->Password = 'Brauser39781';                           // Наш парол
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('avocodesosi@gmail.com', 'Puls');   // От кого письмо 
+$mail->setFrom('avocodesosi@gmail.com', 'AVL-Lift');   // От кого письмо 
 $mail->addAddress('anton.avhutskiy@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -31,10 +31,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Данные';
 $mail->Body    = '
-		Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone . '<br>
-	E-mail: ' . $email . '<br>
+		Пользователь оставил данные: <br><br> 
+	Имя: ' . $name . ' <br><br>
+	Номер телефона: ' . $phone . '<br><br>
+	E-mail: ' . $email . '<br><br>
 	Комментарий: ' . $text . '';
 	
 
